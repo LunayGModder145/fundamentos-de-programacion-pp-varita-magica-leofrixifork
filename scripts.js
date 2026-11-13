@@ -88,3 +88,52 @@ _**Premium**_
 
 //![](https://media.giphy.com/media/tpTOw6sljB2U/giphy.gif)
 
+//4. Crea una función de nombre `getRandom` que acepte un array con valores y devuelva uno de ellos de manera aleatoria.
+
+
+//    ```javascript
+    const colors = ['red', 'blue', 'green']
+
+    const getRandom = (array) => {
+        const randomIndex = Math.floor(Math.random() * array.length);
+        return array[randomIndex];
+    }
+
+    console.log(getRandom(colors))
+    // imprime 'red', 'blue' o 'green'
+// ```
+//5. Utiliza la función creada `getRandom` para utilizar colores aleatorios de una paleta que hayas escogido de [coolors.co](https://coolors.co/palettes/trending) en los apartados anteriores.
+
+const colorPalette = ['#264653', '#2a9d8f', '#e9c46a', '#f4a261', '#e76f51'];
+
+// Aplicando colores aleatorios en los clics de párrafos y bloques
+for (let i = 0; i < parrafos.length; i++) {
+    parrafos[i].addEventListener('click', () => {
+        parrafos[i].style.color = getRandom(colorPalette);
+        parrafos[i].style.backgroundColor = getRandom(colorPalette);
+    });
+}
+
+for (let i = 0; i < bloques.length; i++) {
+    bloques[i].addEventListener('click', () => {
+        bloques[i].style.backgroundColor = getRandom(colorPalette);
+    });
+}
+
+
+//6. Utiliza la función creada `getRandom` para utilizar _gifs_ aleatorios  en los apartados anteriores.
+
+const magicGifs = [
+    'assets/magic-1.gif',
+    'assets/magic-2.gif',
+    'assets/magic-3.gif',
+    'assets/magic-4.gif',
+    'assets/magic-5.gif',
+    'assets/magic-6.gif'
+];
+
+for (let i = 0; i < imagen.length; i++) {
+    imagen[i].addEventListener('click', () => {
+        imagen[i].src = getRandom(magicGifs);
+    });
+}
