@@ -40,3 +40,51 @@ for (let i = 0; i < bloques.length; i++) {
     });
 }
 
+//3. Cuando el cursor esté sobre alguno de los siguientes elementos, seguir las instrucciones siguientes, y devolver dicho elemento a su estado original cuando salga el cursor.
+
+
+
+//3.1 Imágenes: Cambia la imagen por el gif `abracadabra.gif`.
+for (let i = 0; i < imagen.length; i++) {
+    let originalSrc = imagen[i].src;
+    imagen[i].addEventListener('mouseenter', () => {
+        imagen[i].src = 'assets/abracadabra.gif';
+    });
+    imagen[i].addEventListener('mouseleave', () => {
+        imagen[i].src = originalSrc;
+    });
+}
+
+
+
+//3.2 Párrafos: Cambia el color del texto y el de fondo por uno cualquiera.
+for (let i = 0; i < parrafos.length; i++) {
+    let originalColor = parrafos[i].style.color;
+    let originalBg = parrafos[i].style.backgroundColor;
+    parrafos[i].addEventListener('mouseenter', () => {
+        parrafos[i].style.color = "yellow";
+        parrafos[i].style.backgroundColor = "purple";
+    });
+    parrafos[i].addEventListener('mouseleave', () => {
+        parrafos[i].style.color = originalColor;
+        parrafos[i].style.backgroundColor = originalBg;
+    });
+}
+
+
+
+//3.3 Bloques de `article` o `section`: Color de fondo distinto al de párrafo.
+for (let i = 0; i < bloques.length; i++) {
+    let originalBgBloque = bloques[i].style.backgroundColor;
+    bloques[i].addEventListener('mouseenter', () => {
+        bloques[i].style.backgroundColor = "orange";
+    });
+    bloques[i].addEventListener('mouseleave', () => {
+        bloques[i].style.backgroundColor = originalBgBloque;
+    });
+}
+
+_**Premium**_
+
+//![](https://media.giphy.com/media/tpTOw6sljB2U/giphy.gif)
+
